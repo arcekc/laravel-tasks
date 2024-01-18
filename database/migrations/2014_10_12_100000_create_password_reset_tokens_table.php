@@ -16,7 +16,7 @@ return new class extends Migration
             $table->dropPrimary(['email']);
 
             // Define columns
-            $table->string('email')->primary();
+            // $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
