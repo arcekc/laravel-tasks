@@ -20,8 +20,19 @@ return new class extends Migration
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
+        // Add a new temporary primary key
+        Schema::table('password_reset_tokens', function (Blueprint $table) {
+            $table->increments('id')->first();
+        });
+
+        // Drop the existing primary key
         Schema::table('password_reset_tokens', function (Blueprint $table) {
             $table->dropPrimary(['email']);
+        });
+
+        // Drop the temporary primary key
+        Schema::table('password_reset_tokens', function (Blueprint $table) {
+            $table->dropColumn('id');
         });
     }
 
