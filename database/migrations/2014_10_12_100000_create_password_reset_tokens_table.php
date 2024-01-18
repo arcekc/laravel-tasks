@@ -17,8 +17,8 @@ return new class extends Migration
 
             // Define columns
             // $table->string('email')->primary();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+            // $table->string('token');
+            // $table->timestamp('created_at')->nullable();
         });
         // Add a new temporary primary key
         Schema::table('password_reset_tokens', function (Blueprint $table) {
