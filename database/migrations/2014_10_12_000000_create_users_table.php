@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::dropIfExists('failed_jobs');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('users');
+        Schema::table('password_reset_tokens', function (Blueprint $table) {
+            $table->dropPrimary(['email']);
+        });
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
