@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
+        Schema::table('password_reset_tokens', function (Blueprint $table) {
+            $table->dropPrimary(['email']);
+        });
     }
 
     /**
