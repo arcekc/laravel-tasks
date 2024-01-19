@@ -33,7 +33,7 @@
         }
 
         /* Dark Mode Styles */
-        body.dark-mode {
+        body.dark-mode, .panel {
             background-color: #252525;
             color: #fff;
         }
