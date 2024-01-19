@@ -6,7 +6,17 @@
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
             <div class="panel-heading">
-                New Task
+                <div class="row">
+                    <div class="col-md-6">
+                        New Task
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <!-- Dark Mode Toggle Button -->
+                        <button type="button" class="btn btn-purple text-light" id="toggleDarkModeBtn">
+                            <i id="darkModeIcon" class="fa fa-btn"></i>Dark Mode
+                        </button>
+                    </div>
+                </div>
             </div>
 
             <div class="panel-body">
@@ -30,8 +40,8 @@
                     <!-- Add Task Button -->
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-6">
-                            <button type="submit" class="btn btn-purple text-light" id="toggleDarkModeBtn">
-                                <i id="darkModeIcon" class="fa fa-btn"></i>Add Task
+                            <button type="submit" class="btn btn-purple text-light">
+                                <i class="fa fa-btn fa-plus"></i>Add Task
                             </button>
                         </div>
                     </div>
@@ -100,11 +110,13 @@
         if (isDarkMode) {
             toggleDarkModeBtn.classList.remove('btn-light');
             toggleDarkModeBtn.classList.add('btn-dark');
-            darkModeIcon.className = 'fa fa-sun';
+            darkModeIcon.className = 'fa fa-moon';
+            toggleDarkModeBtn.textContent = 'Light Mode';
         } else {
             toggleDarkModeBtn.classList.remove('btn-dark');
             toggleDarkModeBtn.classList.add('btn-light');
-            darkModeIcon.className = 'fa fa-moon';
+            darkModeIcon.className = 'fa fa-sun';
+            toggleDarkModeBtn.textContent = 'Dark Mode';
         }
     }
 
