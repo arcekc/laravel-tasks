@@ -6,6 +6,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     New Task
+                    <span id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </span>
                 </div>
 
                 <div class="panel-body">
@@ -81,4 +85,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Include Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-4o5+DEhRU9L6eg4KBE5Gg/YtsJHvzMy0dFN2skx7T+K9GSaTy96Hzc8YHlpRbb+8SR5YW7fwkRhmqRLAtHGo/g==" crossorigin="anonymous" />
+
+    <!-- Theme toggle styles and script -->
+    <style>
+        .theme-toggle {
+            cursor: pointer;
+            float: right;
+        }
+
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 @endsection
