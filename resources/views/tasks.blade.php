@@ -107,6 +107,17 @@
         color: #fff;
     }
 
+    .panel.panel-default,
+    .panel-heading,
+    .panel-body {
+        background-color: inherit;
+        border-color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff;
+    }
+
     #sun-icon {
         display: none;
     }
@@ -123,6 +134,7 @@
         display: none;
     }
 </style>
+
 
 <script>
     function toggleTheme() {
