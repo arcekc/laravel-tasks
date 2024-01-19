@@ -1,6 +1,7 @@
 .btn-purple {
     background-color: #6C63FF;
     color: #fff;
+    padding: 10px;
 }
 
 /* Add this to your existing styles or create a new CSS file */
@@ -12,5 +13,5 @@
 }
 
 .navbar-brand img {
-    max-height: 120px; /* Set the max height for the logo */
+    max-height: 130px; /* Set the max height for the logo */
 }
