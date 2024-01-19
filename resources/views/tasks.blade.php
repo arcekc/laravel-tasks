@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-6">
                             <button type="submit" class="btn btn-purple text-light">
-                                <i class="fa fa-btn fa-plus"></i>Add Task
+                                <i class="bi bi-plus"></i></i>Add Task
                             </button>
                         </div>
                     </div>
