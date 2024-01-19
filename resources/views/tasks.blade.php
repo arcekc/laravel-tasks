@@ -13,7 +13,7 @@
                     <div class="col-md-6 text-right">
                         <!-- Dark Mode Toggle Button -->
                         <button type="button" class="btn btn-purple text-light" id="toggleDarkModeBtn">
-                            <i id="darkModeIcon" class="bi bi-moon"></i> Dark Mode
+                            <i id="darkModeIcon" class="bi bi-moon"></i>
                         </button>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
             toggleDarkModeBtn.classList.remove('btn-light');
             toggleDarkModeBtn.classList.add('btn-dark');
             darkModeIcon.className = 'bi bi-sun';
-            toggleDarkModeBtn.textContent = ' Light Mode';
+            // toggleDarkModeBtn.textContent = ' Light Mode';
         } else {
             toggleDarkModeBtn.classList.remove('btn-dark');
             toggleDarkModeBtn.classList.add('btn-light');
