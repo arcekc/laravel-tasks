@@ -4,11 +4,11 @@
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
-            <div class="panel-heading d-flex">
+            <div class="panel-heading d-flex justify-content-between">
                 <span>New Task</span>
-                <span id="theme-toggle" class="btn-purple ml-auto" onclick="toggleTheme()">
-                    <i id="sun-icon" class="fa fa-sun-o ml-auto"></i>
-                    <i id="moon-icon" class="fa fa-moon-o ml-auto"></i>
+                <span id="theme-toggle" class="btn-purple" onclick="toggleTheme()">
+                    <i id="sun-icon" class="fa fa-sun-o"></i>
+                    <i id="moon-icon" class="fa fa-moon-o"></i>
                 </span>
             </div>
 
