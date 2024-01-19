@@ -51,7 +51,7 @@
 
             <div class="panel-body">
                 <table
-                    class="table {{ (strpos(Request::url(), 'dark-mode') !== false ? '' : 'table-striped') }} task-table">
+                    class="table {{ (strpos(Request::url(), 'dark-mode') !== false ? 'dark-mode' : 'table-striped') }} task-table">
                     <thead>
                         <th>Task</th>
                         <th>&nbsp;</th>
