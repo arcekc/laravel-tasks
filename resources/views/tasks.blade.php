@@ -50,7 +50,7 @@
             </div>
 
             <div class="panel-body">
-                <table class="table table-striped task-table">
+                <table class="table {{ (Request::is('dark-mode*') ? '' : 'table-striped') }} task-table">
                     <thead>
                         <th>Task</th>
                         <th>&nbsp;</th>
@@ -80,6 +80,7 @@
             </div>
         </div>
         @endif
+
         <!-- Elapsed time -->
         <div class="panel panel-default">
             <div class="panel-body">
