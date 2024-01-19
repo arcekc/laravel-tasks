@@ -103,7 +103,7 @@
 
     body.dark-mode,
     div.dark-mode {
-        background-color: ##1A0F55;
+        background-color: #1A0F55;
         color: #fff;
     }
 
@@ -122,15 +122,11 @@
     body.dark-mode #moon-icon {
         display: none;
     }
-
-    body.dark-mode .panel-heading {
-        background-color: none !important;
-    }
 </style>
 
 <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+    }
 </script>
 @endsection
