@@ -7,7 +7,7 @@
 .custom-navbar {
     background-image: url('../images/banner.svg'); /* Update with your image path */
     background-size: cover;
-    min-height: 80px;
+    min-height: 150px;
 }
 
 .navbar-brand img {
