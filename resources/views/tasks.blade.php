@@ -4,9 +4,9 @@
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
-        <div class="panel-heading d-flex justify-content-between align-items-center">
+        <div class="panel-heading d-flex">
                 <span>New Task</span>
-                <span id="theme-toggle" class="btn-purple d-flex" onclick="toggleTheme()">
+                <span id="theme-toggle" class="btn-purple ml-auto" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o ml-auto"></i>
                     <i id="moon-icon" class="fa fa-moon-o ml-auto"></i>
                 </span>
@@ -101,8 +101,7 @@
         float: right;
     }
 
-    body.dark-mode,
-    div.dark-mode {
+    body.dark-mode {
         background-color: #252525;
         color: #fff;
     }
