@@ -6,7 +6,7 @@
         <div class="panel panel-default">
         <div class="panel-heading d-flex justify-content-between align-items-center">
                 <span>New Task</span>
-                <span id="theme-toggle" class="btn-purple theme-toggle" onclick="toggleTheme()">
+                <span id="theme-toggle" class="btn-purple d-flex" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o ml-auto"></i>
                     <i id="moon-icon" class="fa fa-moon-o ml-auto"></i>
                 </span>
@@ -111,7 +111,6 @@
     .panel-heading,
     .panel-body {
         background-color: inherit;
-        border-color: inherit;
     }
 
     .panel-heading {
