@@ -9,7 +9,6 @@
     <title>Task Trackr</title>
 
     <!-- Favicon -->
-    <!-- Favicon -->
     <link rel="icon" href="{{ secure_asset('favicon.ico') }}" type="image/x-icon">
 
 
@@ -31,19 +30,6 @@
         .fa-btn {
             margin-right: 6px;
         }
-
-        /* Dark Mode Styles */
-        body.dark-mode, .panel {
-            background-color: #252525;
-            color: #fff;
-        }
-
-        /* Moon/Sun Toggle Styles */
-        #darkModeToggle {
-            cursor: pointer;
-            font-size: 20px;
-            margin: 10px;
-        }
     </style>
 </head>
 
@@ -56,11 +42,6 @@
                     <img src="{{ secure_asset('white-logo.png') }}" alt="Logo" style="height: 30px; width: auto;">
                 </a>
             </div>
-
-            <!-- Dark Mode Toggle Button -->
-            <button id="darkModeToggle" onclick="toggleDarkMode()">
-                🌙
-            </button>
         </div>
     </nav>
 
@@ -71,13 +52,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{--
     <script src="{{ elixir('js/app.js') }}"></script> --}}
-
-    <script>
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 </body>
 
 </html>
