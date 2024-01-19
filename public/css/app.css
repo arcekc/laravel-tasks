@@ -1,14 +1,19 @@
 .btn-purple {
-    background-color: #6C63FF;
+    background-color: #6c63ff;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.nav-new {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Add this to your existing styles or create a new CSS file */
 .custom-navbar {
-    background-image: url('../images/banner.svg'); /* Update with your image path */
+    background-image: url("../images/banner.svg"); /* Update with your image path */
     background-size: cover;
     min-height: 150px;
     border: 0 !important;
