@@ -9,7 +9,7 @@
     <title>Task Trackr</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./public/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet'
@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
         body {
