@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
-        <div class="panel-heading d-flex">
+            <div class="panel-heading d-flex">
                 <span>New Task</span>
                 <span id="theme-toggle" class="btn-purple ml-auto" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o ml-auto"></i>
@@ -108,8 +108,11 @@
 
     .panel.panel-default,
     .panel-heading,
-    .panel-body {
+    .panel-body,
+    .form-control,
+    .table {
         background-color: inherit;
+        color: inherit;
     }
 
     .panel-heading {
@@ -139,6 +142,7 @@
         display: none;
     }
 </style>
+
 
 <script>
     function toggleTheme() {
