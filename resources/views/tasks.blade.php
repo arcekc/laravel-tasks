@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container dark-mode">
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -43,7 +43,7 @@
 
             <!-- Current Tasks -->
             @if (count($tasks) > 0)
-                <div class="panel panel-default">
+                <div class="panel panel-default dark-mode">
                     <div class="panel-heading">
                         Current Tasks
                     </div>
@@ -96,8 +96,8 @@
             float: right;
         }
 
-        body.dark-mode {
-            background-color: #222;
+        body.dark-mode, div.dark-mode {
+            background-color: #171923;
             color: #fff;
         }
     </style>
