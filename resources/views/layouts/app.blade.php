@@ -49,11 +49,11 @@
 
 <body id="app-layout">
     <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header btn-purple">
+        <div class="container btn-purple">
+            <div class="navbar-header">
                 <!-- Branding Image with Logo -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset('white-logo.png') }}" alt="Logo" style="height: 30px; width: auto;">
+                    <img src="{{ secure_asset('white-logo.png') }}" alt="Logo" style="height: 30px; width: auto;">
                 </a>
             </div>
 
