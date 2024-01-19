@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container dark-mode">
+<div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
             <div class="panel-heading">
                 New Task
-                <span id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
+                <span id="theme-toggle" class="theme-toggle btn-purple" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o"></i>
                     <i id="moon-icon" class="fa fa-moon-o"></i>
                 </span>
