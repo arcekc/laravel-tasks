@@ -51,8 +51,7 @@
 
             <div class="panel-body">
                 <table
-                    class="table {{ (strpos(Request::url(), 'dark-mode') !== false ? 'dark-mode no-stripes' : 'table-striped') }} task-table">
-
+                    class="table task-table">
                     <thead>
                         <th>Task</th>
                         <th>&nbsp;</th>
@@ -144,14 +143,6 @@
 
     body.dark-mode #moon-icon {
         display: none;
-    }
-
-    body.dark-mode .no-stripes tbody tr:nth-child(odd) {
-        background-color: inherit;
-    }
-
-    body.dark-mode .no-stripes tbody tr:nth-child(even) {
-        background-color: inherit;
     }
 </style>
 
