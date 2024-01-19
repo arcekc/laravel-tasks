@@ -7,8 +7,8 @@
                 <div class="panel-heading">
                     New Task
                     <span id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-moon"></i>
+                        <i class="fa fa-sun-o"></i>
+                        <i class="fa fa-moon-o"></i>
                     </span>
                 </div>
 
