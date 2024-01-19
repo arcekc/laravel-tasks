@@ -48,8 +48,8 @@
 </head>
 
 <body id="app-layout">
-    <nav class="navbar navbar-default">
-        <div class="container btn-purple">
+    <nav class="navbar navbar-default custom-navbar">
+        <div class="container">
             <div class="navbar-header">
                 <!-- Branding Image with Logo -->
                 <a class="navbar-brand" href="{{ url('/') }}">

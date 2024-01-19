@@ -2,3 +2,9 @@
     background-color: #6C63FF;
     color: #fff;
 }
+
+/* Add this to your existing styles or create a new CSS file */
+.custom-navbar {
+    background-image: url('../images/banner.svg'); /* Update with your image path */
+    background-size: cover;
+}
