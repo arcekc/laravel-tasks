@@ -3,6 +3,7 @@
     color: #fff;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Add this to your existing styles or create a new CSS file */

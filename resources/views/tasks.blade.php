@@ -4,11 +4,11 @@
 <div class="container">
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                New Task
-                <span id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
-                    <i id="sun-icon" class="fa fa-sun-o"></i>
-                    <i id="moon-icon" class="fa fa-moon-o"></i>
+        <div class="panel-heading d-flex justify-content-between align-items-center">
+                <span>New Task</span>
+                <span id="theme-toggle" class="btn-purple" onclick="toggleTheme()">
+                    <i id="sun-icon" class="fa fa-sun-o ml-auto"></i>
+                    <i id="moon-icon" class="fa fa-moon-o ml-auto"></i>
                 </span>
             </div>
 
@@ -103,7 +103,7 @@
 
     body.dark-mode,
     div.dark-mode {
-        background-color: #1A0F55;
+        background-color: #252525;
         color: #fff;
     }
 
