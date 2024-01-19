@@ -39,7 +39,7 @@
             <div class="navbar-header">
                 <!-- Branding Image with Logo -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ secure_asset('white-logo.png') }}" alt="Logo" style="height: 30px; width: auto;">
+                    <img src="{{ secure_asset('white-logo.png') }}" alt="Logo">
                 </a>
             </div>
         </div>
