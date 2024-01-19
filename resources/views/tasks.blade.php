@@ -5,7 +5,7 @@
     <div class="col-sm-offset-2 col-sm-8">
         <div class="panel panel-default">
             <div class="panel-heading nav-new d-flex justify-content-between">
-                <span>New Task</span>
+                <span class="title">New Task</span>
                 <span id="theme-toggle" class="btn-purple" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o"></i>
                     <i id="moon-icon" class="fa fa-moon-o"></i>
@@ -45,8 +45,8 @@
         <!-- Current Tasks -->
         @if (count($tasks) > 0)
         <div class="panel panel-default dark-mode">
-            <div class="panel-heading">
-                Current Tasks
+            <div class="panel-heading ">
+                <span class="title"> Current Tasks</span>
             </div>
 
             <div class="panel-body">
@@ -112,7 +112,8 @@
     .panel-heading,
     .panel-body,
     .form-control,
-    .table {
+    .table,
+    .title {
         background-color: inherit;
         color: inherit;
     }
