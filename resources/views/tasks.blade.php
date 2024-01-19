@@ -13,7 +13,7 @@
                     <div class="col-md-6 text-right">
                         <!-- Dark Mode Toggle Button -->
                         <button type="button" class="btn btn-purple text-light" id="toggleDarkModeBtn">
-                            <i id="darkModeIcon" class="fa fa-btn"></i>Dark Mode
+                            <i id="darkModeIcon" class="bi bi-moon"></i> Dark Mode
                         </button>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-6">
                             <button type="submit" class="btn btn-purple text-light">
-                                <i class="bi bi-plus"></i></i>Add Task
+                                <i class="bi bi-plus"></i> Add Task
                             </button>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                     {{ method_field('DELETE') }}
 
                                     <button type="submit" class="btn btn-danger">
-                                        <i class="fa fa-btn fa-trash"></i>Delete
+                                        <i class="fa fa-btn fa-trash"></i> Delete
                                     </button>
                                 </form>
                             </td>
@@ -110,13 +110,13 @@
         if (isDarkMode) {
             toggleDarkModeBtn.classList.remove('btn-light');
             toggleDarkModeBtn.classList.add('btn-dark');
-            darkModeIcon.className = 'fa fa-moon';
-            toggleDarkModeBtn.textContent = 'Light Mode';
+            darkModeIcon.className = 'bi bi-sun';
+            toggleDarkModeBtn.textContent = ' Light Mode';
         } else {
             toggleDarkModeBtn.classList.remove('btn-dark');
             toggleDarkModeBtn.classList.add('btn-light');
-            darkModeIcon.className = 'fa fa-sun';
-            toggleDarkModeBtn.textContent = 'Dark Mode';
+            darkModeIcon.className = 'bi bi-moon';
+            toggleDarkModeBtn.textContent = ' Dark Mode';
         }
     }
 
