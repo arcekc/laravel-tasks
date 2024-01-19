@@ -6,7 +6,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 New Task
-                <span id="theme-toggle" class="theme-toggle btn-purple" onclick="toggleTheme()">
+                <span id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">
                     <i id="sun-icon" class="fa fa-sun-o"></i>
                     <i id="moon-icon" class="fa fa-moon-o"></i>
                 </span>
@@ -118,6 +118,13 @@
         color: #fff;
     }
 
+    .icon-btn {
+        background-color: #6C63FF;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+
     #sun-icon {
         display: none;
     }
@@ -134,7 +141,6 @@
         display: none;
     }
 </style>
-
 
 <script>
     function toggleTheme() {
