@@ -30,8 +30,8 @@
                     <!-- Add Task Button -->
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-6">
-                            <button type="submit" class="btn btn-purple text-light">
-                                <i class="fa fa-btn fa-plus"></i>Add Task
+                            <button type="submit" class="btn btn-purple text-light" id="toggleDarkModeBtn">
+                                <i id="darkModeIcon" class="fa fa-btn"></i>Add Task
                             </button>
                         </div>
                     </div>
@@ -86,14 +86,34 @@
     </div>
 </div>
 
-<!-- Apply dark mode styles to the body -->
+<!-- JavaScript to toggle dark mode -->
 <script>
-    // Check if dark mode is enabled
     var isDarkMode = document.body.classList.contains('dark-mode');
+    var toggleDarkModeBtn = document.getElementById('toggleDarkModeBtn');
+    var darkModeIcon = document.getElementById('darkModeIcon');
 
-    // Add custom class to the body
-    if (isDarkMode) {
-        document.body.classList.add('dark-mode');
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        isDarkMode = !isDarkMode;
+
+        // Update button and icon based on mode
+        if (isDarkMode) {
+            toggleDarkModeBtn.classList.remove('btn-light');
+            toggleDarkModeBtn.classList.add('btn-dark');
+            darkModeIcon.className = 'fa fa-sun';
+        } else {
+            toggleDarkModeBtn.classList.remove('btn-dark');
+            toggleDarkModeBtn.classList.add('btn-light');
+            darkModeIcon.className = 'fa fa-moon';
+        }
     }
+
+    // Set initial state on page load
+    if (isDarkMode) {
+        toggleDarkMode();
+    }
+
+    // Add event listener to the button
+    toggleDarkModeBtn.addEventListener('click', toggleDarkMode);
 </script>
 @endsection
