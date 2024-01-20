@@ -169,6 +169,8 @@
         border-radius: 10px;
         overflow: hidden;
         /* margin-bottom: 20px; */
+        background-color: inherit;
+        color: inherit;
     }
 
     #chatbot-container iframe {
