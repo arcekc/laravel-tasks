@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <!-- Chatbot container on the right side -->
+        <!-- Chatbot container on the right side test-->
         <div class="col-sm-4">
             <div id="chatbot-container">
                 <iframe
