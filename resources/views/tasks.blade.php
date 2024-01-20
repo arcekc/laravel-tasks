@@ -151,10 +151,11 @@
     #chatbot-container {
         min-width: 400px;
         width: 100%;
-        min-height: 500px;
+        /* min-height: 500px; */
         border: 1px solid #ccc;
         border-radius: 10px;
         overflow: hidden;
+        margin-bottom: 20px;
     }
 
     #chatbot-container iframe {
