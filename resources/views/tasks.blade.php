@@ -169,8 +169,6 @@
         border-radius: 10px;
         overflow: hidden;
         /* margin-bottom: 20px; */
-        background-color: inherit;
-        color: inherit;
     }
 
     #chatbot-container iframe {
@@ -196,24 +194,19 @@
 
 <script>
     function toggleTheme() {
-        document.body.classList.toggle('dark-mode');
-        setIframeStyles();
+        document.body.classList.toggle("dark-mode");
+        setDocumentStyles();
     }
 
-    // New function to set styles for elements inside the iframe
-    function setIframeStyles() {
+    function setDocumentStyles() {
         const darkMode = document.body.classList.contains('dark-mode');
-        const iframe = document.querySelector('#chatbot-container iframe');
+        const elementsToStyle = document.querySelectorAll('div[class^="webchat--css-"]');
 
-        iframe.contentDocument.head.insertAdjacentHTML('beforeend', `
-            <style>
-                body {
-                    background-color: ${darkMode ? '#252525' : 'inherit'} !important;
-                    color: ${darkMode ? '#fff' : 'inherit'} !important;
-                    /* Add more styles if needed */
-                }
-            </style>
-        `);
+        elementsToStyle.forEach((element) => {
+            element.style.backgroundColor = darkMode ? 'inherit' : 'inherit';
+            element.style.color = darkMode ? 'inherit' : 'inherit';
+            // Add more styles if needed
+        });
     }
 </script>
 @endsection
