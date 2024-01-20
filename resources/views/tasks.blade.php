@@ -87,9 +87,10 @@
                 Response time: {{ $elapsed * 1000 }} milliseconds.
             </div>
         </div>
-        <iframe
-            src='https://webchat.botframework.com/embed/task-trackr-language-ict723-bot?s=KYBps-JgV8o.ODplUsoQp0W0oKnZ63wL8JyUObrAlmp-3F4Nl3nt1e8'
-            style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+        <div id="chatbot-container">
+            <iframe
+                src='https://webchat.botframework.com/embed/task-trackr-language-ict723-bot?s=KYBps-JgV8o.ODplUsoQp0W0oKnZ63wL8JyUObrAlmp-3F4Nl3nt1e8'></iframe>
+        </div>
     </div>
 </div>
 
@@ -145,6 +146,21 @@
 
     body.dark-mode #moon-icon {
         display: none;
+    }
+
+    #chatbot-container {
+        min-width: 400px;
+        width: 100%;
+        min-height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #chatbot-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 </style>
 
