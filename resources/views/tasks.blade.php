@@ -170,8 +170,11 @@
         width: 100%;
         min-height: 500px;
         border: none;
+        background-color: inherit;
+        /* Set background color */
         font-family: 'Lato';
     }
+
 
     body.dark-mode #chatbot-container {
         background-color: #252525;
