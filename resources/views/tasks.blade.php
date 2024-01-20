@@ -90,7 +90,7 @@
 
         <!-- Chatbot container on the right side -->
         <div class="col-sm-4">
-            <div id="chatbot-container">
+            <div >
                 <iframe
                     src="https://webchat.botframework.com/embed/task-trackr-language-ict723-bot?s=KYBps-JgV8o.ODplUsoQp0W0oKnZ63wL8JyUObrAlmp-3F4Nl3nt1e8"></iframe>
             </div>
