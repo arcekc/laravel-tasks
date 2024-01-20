@@ -194,19 +194,24 @@
 
 <script>
     function toggleTheme() {
-        document.body.classList.toggle("dark-mode");
-        setDocumentStyles();
+        document.body.classList.toggle('dark-mode');
+        setIframeStyles();
     }
 
-    function setDocumentStyles() {
+    // New function to set styles for elements inside the iframe
+    function setIframeStyles() {
         const darkMode = document.body.classList.contains('dark-mode');
-        const elementsToStyle = document.querySelectorAll('[class^="webchat--css-"]');
+        const iframe = document.querySelector('#chatbot-container iframe');
 
-        elementsToStyle.forEach((element) => {
-            element.style.backgroundColor = darkMode ? '#252525' : 'inherit';
-            element.style.color = darkMode ? '#fff' : 'inherit';
-            // Add more styles if needed
-        });
+        iframe.contentDocument.head.insertAdjacentHTML('beforeend', `
+            <style>
+                body {
+                    background-color: ${darkMode ? '#252525' : 'inherit'} !important;
+                    color: ${darkMode ? '#fff' : 'inherit'} !important;
+                    /* Add more styles if needed */
+                }
+            </style>
+        `);
     }
 </script>
 @endsection
