@@ -200,11 +200,18 @@
 
     function setIframeStyles() {
         const iframe = document.querySelector('#chatbot-container iframe');
-        if (iframe) {
+        if (iframe && iframe.contentWindow.location.host === window.location.host) {
             const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
             if (iframeDocument) {
-                iframeDocument.body.style.backgroundColor = 'inherit';
-                iframeDocument.body.style.color = 'inherit';
+                const chatbotCssClass = Array.from(iframeDocument.body.classList).find(
+                    (className) => className.startsWith('webchat--css-')
+                );
+
+                if (chatbotCssClass) {
+                    iframeDocument.querySelector(`.${chatbotCssClass}`).style.backgroundColor = 'inherit';
+                    iframeDocument.querySelector(`.${chatbotCssClass}`).style.color = 'inherit';
+                    // Add more styles if needed
+                }
             }
         }
     }
