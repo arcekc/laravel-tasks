@@ -199,15 +199,14 @@
     }
 
     function setDocumentStyles() {
-        const chatbotCssClass = Array.from(document.body.classList).find(
-            (className) => className.startsWith('webchat--css-')
-        );
+        const darkMode = document.body.classList.contains('dark-mode');
+        const elementsToStyle = document.querySelectorAll('[class^="webchat--css-"]');
 
-        if (chatbotCssClass) {
-            document.querySelector(`.${chatbotCssClass}`).style.backgroundColor = 'inherit';
-            document.querySelector(`.${chatbotCssClass}`).style.color = 'inherit';
+        elementsToStyle.forEach((element) => {
+            element.style.backgroundColor = darkMode ? '#252525' : 'inherit';
+            element.style.color = darkMode ? '#fff' : 'inherit';
             // Add more styles if needed
-        }
+        });
     }
 </script>
 @endsection
