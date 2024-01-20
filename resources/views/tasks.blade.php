@@ -170,6 +170,7 @@
         width: 100%;
         min-height: 500px;
         border: none;
+        font-family: 'Lato';
     }
 
     body.dark-mode #chatbot-container {
