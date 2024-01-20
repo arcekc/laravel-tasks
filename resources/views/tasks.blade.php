@@ -195,7 +195,7 @@
 <script>
     function toggleTheme() {
         document.body.classList.toggle("dark-mode");
-        document.querySelector('#chatbot-container').classList.toggle("dark-mode");
+        setDocumentStyles();
     }
 
     function setDocumentStyles() {
