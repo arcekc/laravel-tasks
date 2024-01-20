@@ -199,12 +199,12 @@
     }
 
     function setDocumentStyles() {
-        const darkMode = document.body.classList.contains('dark-mode');
+        // const darkMode = document.body.classList.contains('dark-mode');
         const elementsToStyle = document.querySelectorAll('div[class^="webchat--css-"]');
 
         elementsToStyle.forEach((element) => {
-            element.style.backgroundColor = darkMode ? 'inherit' : 'inherit';
-            element.style.color = darkMode ? 'inherit' : 'inherit';
+            element.style.backgroundColor = 'inherit';
+            element.style.color = 'inherit';
             // Add more styles if needed
         });
     }
