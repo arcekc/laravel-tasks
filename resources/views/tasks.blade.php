@@ -120,7 +120,11 @@
     .panel-body,
     .form-control,
     .table,
-    .title {
+    .title,
+    .webchat--css-birrx-1egyv3b,
+    .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main,
+    #chatbot-container,
+    iframe {
         background-color: inherit;
         color: inherit;
     }
@@ -171,7 +175,9 @@
     body.dark-mode #chatbot-container {
         background-color: #252525;
     }
-    .webchat--css-birrx-1egyv3b, .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main {
+
+    .webchat--css-birrx-1egyv3b,
+    .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main {
         background-color: inherit;
         color: white;
     }
