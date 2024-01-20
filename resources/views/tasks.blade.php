@@ -180,8 +180,8 @@
         background-color: #252525;
     }
 
-    .webchat--css-birrx-1egyv3b,
-    .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main {
+    .webchat--css,
+    .webchawebchat__send-box__main {
         background-color: inherit;
         color: white;
     }
@@ -191,6 +191,22 @@
     function toggleTheme() {
         document.body.classList.toggle("dark-mode");
         document.querySelector('#chatbot-container').classList.toggle("dark-mode");
+    }
+  toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('#chatbot-container').classList.toggle('dark-mode');
+        setIframeStyles();
+    }
+
+    function setIframeStyles() {
+        const iframe = document.querySelector('#chatbot-container iframe');
+        if (iframe) {
+            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+            if (iframeDocument) {
+                iframeDocument.body.style.backgroundColor = 'inherit';
+                iframeDocument.body.style.color = 'inherit';
+            }
+        }
     }
 </script>
 @endsection
