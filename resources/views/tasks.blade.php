@@ -200,7 +200,7 @@
 
     function setDocumentStyles() {
         // const darkMode = document.body.classList.contains('dark-mode');
-        const elementsToStyle = document.querySelectorAll('[class^="webchat--css-"]');
+        const elementsToStyle = document.querySelectorAll('[class^="webchat--css"]');
         console.log(elementsToStyle);
         elementsToStyle.forEach((element) => {
             element.style.backgroundColor = 'inherit';
