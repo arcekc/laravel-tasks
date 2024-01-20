@@ -115,6 +115,11 @@
         color: #fff;
     }
 
+    body {
+        background-color: inherit;
+        color: inherit;
+    }
+
     .panel.panel-default,
     .panel-heading,
     .panel-body,
