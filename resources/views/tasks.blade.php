@@ -198,21 +198,15 @@
         document.querySelector('#chatbot-container').classList.toggle("dark-mode");
     }
 
-    function setIframeStyles() {
-        const iframe = document.querySelector('#chatbot-container iframe');
-        if (iframe && iframe.contentWindow.location.host === window.location.host) {
-            const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-            if (iframeDocument) {
-                const chatbotCssClass = Array.from(iframeDocument.body.classList).find(
-                    (className) => className.startsWith('webchat--css-')
-                );
+    function setDocumentStyles() {
+        const chatbotCssClass = Array.from(document.body.classList).find(
+            (className) => className.startsWith('webchat--css-')
+        );
 
-                if (chatbotCssClass) {
-                    iframeDocument.querySelector(`.${chatbotCssClass}`).style.backgroundColor = 'inherit';
-                    iframeDocument.querySelector(`.${chatbotCssClass}`).style.color = 'inherit';
-                    // Add more styles if needed
-                }
-            }
+        if (chatbotCssClass) {
+            document.querySelector(`.${chatbotCssClass}`).style.backgroundColor = 'inherit';
+            document.querySelector(`.${chatbotCssClass}`).style.color = 'inherit';
+            // Add more styles if needed
         }
     }
 </script>
