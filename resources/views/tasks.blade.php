@@ -90,7 +90,7 @@
 
         <!-- Chatbot container on the right side -->
         <div class="col-sm-4">
-            <div >
+            <div id="chatbot-container">
                 <iframe
                     src="https://webchat.botframework.com/embed/task-trackr-language-ict723-bot?s=KYBps-JgV8o.ODplUsoQp0W0oKnZ63wL8JyUObrAlmp-3F4Nl3nt1e8"></iframe>
             </div>
@@ -164,7 +164,7 @@
 
     #chatbot-container iframe {
         width: 100%;
-        height: 100%;
+        min-height: 500px;
         border: none;
     }
 
