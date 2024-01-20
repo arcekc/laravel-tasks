@@ -171,6 +171,10 @@
     body.dark-mode #chatbot-container {
         background-color: #252525;
     }
+    .webchat--css-birrx-1egyv3b, .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main {
+        background-color: inherit;
+        color: white;
+    }
 </style>
 
 <script>
