@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="border-button">
+    <a href="#" onclick="redirectToTasks('standard')">Purchase This Plan Now</a>
+</div>
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
@@ -191,6 +196,31 @@
         color: white;
     }
 </style>
+
+<script>
+        // Function to handle redirection based on the selected plan
+        function redirectToTasks(plan) {
+            // You can customize the redirection URL based on the selected plan
+            var redirectUrl = '/tasks';
+
+            // Add more customization if needed based on the selected plan
+            switch (plan) {
+                case 'standard':
+                    // Add specific handling for the Standard Plan if needed
+                    break;
+                case 'business':
+                    // Add specific handling for the Business Plan if needed
+                    break;
+                case 'premium':
+                    // Add specific handling for the Premium Plan if needed
+                    break;
+                // Add more cases for other plans if needed
+            }
+
+            // Redirect to the specified URL
+            window.location.href = redirectUrl;
+        }
+    </script>
 
 <script>
     function toggleTheme() {
