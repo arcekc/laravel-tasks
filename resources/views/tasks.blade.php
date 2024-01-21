@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<script>
+<style>
     <link href="{{ secure_asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ secure_asset('assets/css/templatemo-chain-app-dev.css') }}">
     <link rel="stylesheet" href="{{ secure_asset('assets/css/animated.css') }}">
      <link rel="stylesheet" href="{{ secure_asset('assets/css/owl.css') }}">
-</script>
+</style>
 
 <div id="pricing" class="pricing-tables">
     <div class="container">
@@ -88,8 +88,8 @@
 <script src="{{ secure_asset('vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ secure_asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ secure_asset('assets/js/owl-carousel.js') }}"></script>
-<script src="{{ secure_asset('assets/js/animation.jss') }}"></script>
-<script src="{{ secure_asset('assets/js/imagesloaded.jss') }}"></script>
-<script src="{{ secure_asset('assets/js/popup.jss') }}"></script>
-<script src="{{ secure_asset('assets/js/custom.jss') }}"></script>
+<script src="{{ secure_asset('assets/js/animation.js') }}"></script>
+<script src="{{ secure_asset('assets/js/imagesloaded.js') }}"></script>
+<script src="{{ secure_asset('assets/js/popup.js') }}"></script>
+<script src="{{ secure_asset('assets/js/custom.js') }}"></script>
 @endsection
