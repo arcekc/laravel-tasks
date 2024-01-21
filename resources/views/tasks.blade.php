@@ -77,6 +77,8 @@
 </div>
 
 <!-- Scripts -->
+<script src="{{ secure_asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ secure_asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ secure_asset('assets/js/owl-carousel.js') }}"></script>
 <script src="{{ secure_asset('assets/js/animation.jss') }}"></script>
 <script src="{{ secure_asset('assets/js/imagesloaded.jss') }}"></script>
