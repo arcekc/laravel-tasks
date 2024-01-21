@@ -45,7 +45,7 @@
         </div>
     </nav>
 
-    @yield('content')
+    @yield('pricing')
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
