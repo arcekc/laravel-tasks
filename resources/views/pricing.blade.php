@@ -8,7 +8,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{{ secure_asset('assets/images/heading-line-dec.png') }}" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
           </div>
         </div>
@@ -17,7 +17,7 @@
             <span class="price">$12</span>
             <h4>Standard Plan App</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
             </div>
             <ul>
               <li>Lorem Ipsum Dolores</li>
@@ -37,7 +37,7 @@
             <span class="price">$25</span>
             <h4>Business Plan App</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
             </div>
             <ul>
               <li>Lorem Ipsum Dolores</li>
@@ -57,7 +57,7 @@
             <span class="price">$66</span>
             <h4>Premium Plan App</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
             </div>
             <ul>
               <li>Lorem Ipsum Dolores</li>
@@ -77,12 +77,10 @@
   </div> 
 
    <!-- Scripts -->
-   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{{ secure_asset('assets/js/owl-carousel.js') }}"></script>
+  <script src="{{ secure_asset('assets/js/animation.jss') }}"></script>
+  <script src="{{ secure_asset('assets/js/imagesloaded.jss') }}"></script>
+  <script src="{{ secure_asset('assets/js/popup.jss') }}"></script>
+  <script src="{{ secure_asset('assets/js/custom.jss') }}"></script>
   @endsection
   
