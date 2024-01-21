@@ -21,7 +21,7 @@
                         <img src="assets/images/pricing-table-01.png" alt="">
                     </div>
                     <ul>
-                        <li>Lorem Ipsum Dolores</li>
+                        <li>Logirem Ipsum Dolores</li>
                         <li>20 TB of Storage</li>
                         <li class="non-function">Life-time Support</li>
                         <li class="non-function">Premium Add-Ons</li>
