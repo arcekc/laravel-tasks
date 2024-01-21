@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pricing')
+@section('content')
 
 <div id="pricing" class="pricing-tables">
     <div class="container">
