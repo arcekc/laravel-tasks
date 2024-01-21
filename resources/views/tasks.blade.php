@@ -1,87 +1,215 @@
 @extends('layouts.app')
 
-@section('content')
-<div id="pricing" class="pricing-tables">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="section-heading">
-                    <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
-                    <img src="{{ secure_asset('assets/images/heading-line-dec.png') }}" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut
-                        labore et dolore magna.</p>
+@section('tasks')
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <!-- New Task Panel on the left side -->
+            <div class="icon">
+              <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading nav-new d-flex justify-content-between">
+                    <span class="title">New Task</span>
+                    <span id="theme-toggle" class="btn-purple" onclick="toggleTheme()">
+                        <i id="sun-icon" class="fa fa-sun-o"></i>
+                        <i id="moon-icon" class="fa fa-moon-o"></i>
+                    </span>
+                </div>
+                <div class="panel-body">
+                    <!-- Display Validation Errors -->
+                    @include('common.errors')
+
+                    <!-- New Task Form -->
+                    <form action="/task" method="POST" class="form-horizontal">
+                        {{ csrf_field() }}
+
+                        <!-- Task Name -->
+                        <div class="form-group">
+                            <label for="task-name" class="col-sm-3 control-label">Task</label>
+
+                            <div class="col-sm-6">
+                                <input type="text" name="name" id="task-name" class="form-control"
+                                    value="{{ old('task') }}" />
+                            </div>
+                        </div>
+
+                        <!-- Add Task Button -->
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-btn fa-plus"></i>Add Task
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="pricing-item-regular">
-                    <span class="price">$12</span>
-                    <h4>Standard Plan App</h4>
-                    <div class="icon">
-                        <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
-                    </div>
-                    <ul>
-                        <li>Logirem Ipsum Dolores</li>
-                        <li>20 TB of Storage</li>
-                        <li class="non-function">Life-time Support</li>
-                        <li class="non-function">Premium Add-Ons</li>
-                        <li class="non-function">Fastest Network</li>
-                        <li class="non-function">More Options</li>
-                    </ul>
-                    <div class="border-button">
-                        <a href="#">Purchase This Plan Now</a>
-                    </div>
+
+            <!-- Current Tasks Panel on the left side -->
+            @if (count($tasks) > 0)
+            <div class="panel panel-default dark-mode">
+                <div class="panel-heading">
+                    <span class="title"> Current Tasks</span>
+                </div>
+                <div class="panel-body">
+                    <table class="table task-table">
+                        <thead>
+                            <th>Task</th>
+                            <th>&nbsp;</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($tasks as $task)
+                            <tr>
+                                <td class="table-text">
+                                    <div>{{ $task->name }}</div>
+                                </td>
+
+                                <!-- Task Delete Button -->
+                                <td>
+                                    <form action="{{'/task/' . $task->id }}" method="POST">
+                                        {{ csrf_field() }} {{ method_field('DELETE') }}
+
+                                        <button type="submit" class="btn btn-danger">
+                                            <i class="fa fa-btn fa-trash"></i>Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="pricing-item-pro">
-                    <span class="price">$25</span>
-                    <h4>Business Plan App</h4>
-                    <div class="icon">
-                        <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
-                    </div>
-                    <ul>
-                        <li>Lorem Ipsum Dolores</li>
-                        <li>50 TB of Storage</li>
-                        <li>Life-time Support</li>
-                        <li>Premium Add-Ons</li>
-                        <li class="non-function">Fastest Network</li>
-                        <li class="non-function">More Options</li>
-                    </ul>
-                    <div class="border-button">
-                        <a href="#">Purchase This Plan Now</a>
-                    </div>
+            @endif
+
+            <!-- Elapsed time Panel on the left side -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Response time: {{ $elapsed * 1000 }} milliseconds.
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="pricing-item-regular">
-                    <span class="price">$66</span>
-                    <h4>Premium Plan App</h4>
-                    <div class="icon">
-                        <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
-                    </div>
-                    <ul>
-                        <li>Lorem Ipsum Dolores</li>
-                        <li>120 TB of Storage</li>
-                        <li>Life-time Support</li>
-                        <li>Premium Add-Ons</li>
-                        <li>Fastest Network</li>
-                        <li>More Options</li>
-                    </ul>
-                    <div class="border-button">
-                        <a href="#">Purchase This Plan Now</a>
-                    </div>
-                </div>
+        </div>
+
+        <!-- Chatbot container on the right side test-->
+        <div class="col-sm-4">
+            <div id="chatbot-container">
+                <iframe
+                    src="https://webchat.botframework.com/embed/task-trackr-language-ict723-bot?s=KYBps-JgV8o.ODplUsoQp0W0oKnZ63wL8JyUObrAlmp-3F4Nl3nt1e8"></iframe>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Scripts -->
-<script src="{{ secure_asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ secure_asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ secure_asset('assets/js/owl-carousel.js') }}"></script>
-<script src="{{ secure_asset('assets/js/animation.js') }}"></script>
-<script src="{{ secure_asset('assets/js/imagesloaded.js') }}"></script>
-<script src="{{ secure_asset('assets/js/popup.js') }}"></script>
-<script src="{{ secure_asset('assets/js/custom.js') }}"></script>
+<!-- Include Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-4o5+DEhRU9L6eg4KBE5Gg/YtsJHvzMy0dFN2skx7T+K9GSaTy96Hzc8YHlpRbb+8SR5YW7fwkRhmqRLAtHGo/g=="
+    crossorigin="anonymous" />
+
+<!-- Theme toggle styles and script -->
+<style>
+    .theme-toggle {
+        cursor: pointer;
+        float: right;
+    }
+
+    body.dark-mode {
+        background-color: #252525;
+        color: #fff;
+    }
+
+    body {
+        background-color: inherit;
+        color: inherit;
+    }
+
+    .panel.panel-default,
+    .panel-heading,
+    .panel-body,
+    .form-control,
+    .table,
+    .title,
+    .webchat--css-birrx-1egyv3b,
+    .webchat--css-birrx-1bfjcn2.webchat__send-box .webchat__send-box__main,
+    #chatbot-container,
+    iframe {
+        background-color: inherit;
+        color: inherit;
+    }
+
+    .panel-heading {
+        color: #fff;
+    }
+
+    .icon-btn {
+        background-color: #6c63ff;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 5px;
+    }
+
+    #sun-icon {
+        display: none;
+    }
+
+    body.dark-mode #sun-icon {
+        display: inline;
+    }
+
+    #moon-icon {
+        display: inline;
+    }
+
+    body.dark-mode #moon-icon {
+        display: none;
+    }
+
+    #chatbot-container {
+        /* min-width: 400px; */
+        /* width: 100%; */
+        /* min-height: 500px; */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        /* margin-bottom: 20px; */
+    }
+
+    #chatbot-container iframe {
+        width: 100%;
+        min-height: 500px;
+        border: none;
+        background-color: inherit;
+        /* Set background color */
+        font-family: 'Lato';
+    }
+
+
+    body.dark-mode #chatbot-container {
+        background-color: #252525;
+    }
+
+    .webchat--css,
+    .webchawebchat__send-box__main {
+        background-color: inherit;
+        color: white;
+    }
+</style>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        setDocumentStyles();
+    }
+
+    function setDocumentStyles() {
+        // const darkMode = document.body.classList.contains('dark-mode');
+        const elementsToStyle = document.querySelectorAll('[class^="webchat--css"]');
+        console.log(elementsToStyle);
+        elementsToStyle.forEach((element) => {
+            element.style.backgroundColor = 'inherit';
+            element.style.color = 'inherit';
+            // Add more styles if needed
+        });
+    }
+</script>
 @endsection
