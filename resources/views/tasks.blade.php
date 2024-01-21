@@ -6,7 +6,7 @@
         <div class="col-sm-8">
             <!-- New Task Panel on the left side -->
             <div class="icon">
-              <img src="{{ asset('assets/images/pricing-table-01.png') }}" alt="">
+              <img src="{{ secure_asset('assets/images/pricing-table-01.png') }}" alt="">
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading nav-new d-flex justify-content-between">
