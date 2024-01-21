@@ -20,7 +20,7 @@
                         <img src="assets/images/pricing-table-01.png" alt="">
                     </div>
                     <ul>
-                        <li>Lorem Ipsum Dolores</li>
+                        <li>Logirem Ipsum Dolores</li>
                         <li>20 TB of Storage</li>
                         <li class="non-function">Life-time Support</li>
                         <li class="non-function">Premium Add-Ons</li>
@@ -75,4 +75,11 @@
         </div>
     </div>
 </div>
+
+<!-- Scripts -->
+<script src="{{ secure_asset('assets/js/owl-carousel.js') }}"></script>
+<script src="{{ secure_asset('assets/js/animation.jss') }}"></script>
+<script src="{{ secure_asset('assets/js/imagesloaded.jss') }}"></script>
+<script src="{{ secure_asset('assets/js/popup.jss') }}"></script>
+<script src="{{ secure_asset('assets/js/custom.jss') }}"></script>
 @endsection
